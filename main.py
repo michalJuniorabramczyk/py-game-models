@@ -1,11 +1,9 @@
 import init_django_orm  # noqa: F401
-from django.db import models
-from django.utils import timezone
 from db.models import Race, Skill, Player, Guild
 import json
 
 
-def main():
+def main() -> None:
     with open("players.json", "r", encoding="utf-8") as file:
         players_data = json.load(file)
 
